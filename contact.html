@@ -11,13 +11,18 @@
         <meta property="og:title" content="enmossed">
         <meta name="twitter:title" content="enmossed">
 
-        <title>upcoming</title>
+        <title>contact</title>
         <!-- TODO: include icon in root -->
         <link rel="shortcut icon" href="enmossed.ico" type="image/x-icon">
 
         <link rel="stylesheet" href="https://unpkg.com/awsm.css/dist/awsm.min.css" onerror="this.onerror=null;this.href='./css/awsm.min.css';">
         <link rel="stylesheet" href="./css/main.css">
     </head>
+    <script>
+     function showOutput() {
+         document.getElementById('output').style.display = 'block';
+     }
+    </script>
     <body>
         <img width="200" height="200" class="enmossed-background-image" src="enmossed_logo_transparent.png">
         <header>
@@ -37,7 +42,21 @@
         <main>
             <h2>contact</h2>
             <article>
-                <p>contact information here</p>
+                <form onsubmit="showOutput(); return false;">
+                    <fieldset>
+                        <legend>reach enmossed</legend>
+                        <label for="name">name</label>
+                        <input id="name" type="text" value="">
+                        <label for="email">e-mail</label>
+                        <input id="email" type="email" value="">
+                        <label for="message">message</label>
+                        <textarea id="message"></textarea>
+                        <input type="submit" value="Send">
+                        <output id="output" style="display: none">
+                            <p>thank you</p>
+                        </output>
+                    </fieldset>
+                </form>
             </article>
         </main>
     </body>
