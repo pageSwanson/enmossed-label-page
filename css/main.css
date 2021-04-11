@@ -1,0 +1,46 @@
+body {
+    font-family: Cardo;
+    font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6, li {
+    font-family: Amiri;
+    font-style: italic;
+    font-weight: normal;
+}
+
+main {
+    overflow: hidden;
+    position: relative;
+}
+
+body > img {
+    opacity: 0.3;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+body > main {
+    position: relative;
+}
+
+hr {
+    background: black;
+}
+nav {
+    text-align: center;
+}
+nav li a {
+    color: black;
+    text-decoration: none;
+}
+nav li a.active {
+    border-bottom: thin solid black;
+}
+img {
+    vertical-align: middle;
+    display: inline;
+}
