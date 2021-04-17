@@ -35,9 +35,58 @@
         </header>
         <main>
             <h2>info</h2>
-            <article>
-                <p>put dist. info here</p>
+            <article class="info">
+                <p>focused on contemporary sound and growth :: hand-constructed out of recycled materials as possible :: all proceeds to positive endeavors</p>
+
+                <h2>distributors</h2>
+                <div class="distributors"></div>
+
+                <h2>message board</h2>
+                <dl>
+                    <dt>worldwide</dt>
+                    <dd>talk.enxpl.org</dd>
+                </dl>
             </article>
         </main>
     </body>
+    <footer>
+        <script>
+         "use strict";
+
+         var information = {
+             "distributors" : {
+                 "korea": ["Rope Editions"],
+                 "japan": ["Tobira Records", "Art Into Life"],
+                 "russia": ["Stellage"],
+                 "uk": ["Industrial Coast", "Boomkat"],
+                 "usa": ["Torn Light", "Madriguera", "Commend", "All Day Records"],
+                 "digital": ["Bandcamp", "YouTube (ad-free)"]
+             }
+         };
+
+         Object.keys(information.distributors).forEach(function (locale) {
+             if (!information.distributors.hasOwnProperty(locale)) {
+                 return;
+             }
+
+             var distributors = document.querySelector(".distributors");
+
+             let localeGroup = document.createElement("dl");
+
+             distributors.append(localeGroup);
+
+             let localeHead = document.createElement("dt");
+             localeHead.innerHTML = locale;
+
+             distributors.append(localeHead);
+
+             information.distributors[locale].forEach(function (name) {
+                 let distributor = document.createElement("dd");
+                 distributor.innerHTML = name;
+
+                 distributors.append(distributor);
+             });
+         });
+        </script>
+    </footer>
 </html>
