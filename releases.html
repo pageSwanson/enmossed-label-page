@@ -17,6 +17,12 @@
 
         <link rel="stylesheet" href="https://unpkg.com/awsm.css/dist/awsm.min.css" onerror="this.onerror=null;this.href='./css/awsm.min.css';">
         <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/release-tree.css">
+        <script type="module">
+         import ReleaseTree from './release-tree.js';
+
+         window.onload = () => ReleaseTree('article');
+        </script>
     </head>
     <body>
         <img width="200" height="200" class="enmossed-background-image" src="enmossed_logo_transparent.png">
@@ -37,7 +43,6 @@
         <main>
             <h2>releases</h2>
             <article>
-                <p>tree view will go here</p>
             </article>
         </main>
     </body>

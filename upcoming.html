@@ -40,4 +40,39 @@
             </article>
         </main>
     </body>
+    <footer>
+        <script>
+         "use strict";
+
+         var information = {
+             "upcoming" : {
+                 "digital": ["Bandcamp", "YouTube (ad-free)"]
+             }
+         };
+
+         Object.keys(information.distributors).forEach(function (locale) {
+             if (!information.distributors.hasOwnProperty(locale)) {
+                 return;
+             }
+
+             var distributors = document.querySelector(".distributors");
+
+             let localeGroup = document.createElement("dl");
+
+             distributors.append(localeGroup);
+
+             let localehead = document.createelement("dt");
+             localehead.innerhtml = locale;
+
+             distributors.append(localehead);
+
+             information.distributors[locale].foreach(function (name) {
+                 let distributor = document.createelement("dd");
+                 distributor.innerhtml = name;
+
+                 distributors.append(distributor);
+             });
+         });
+        </script>
+    </footer>
 </html>

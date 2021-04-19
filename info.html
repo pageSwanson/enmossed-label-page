@@ -16,6 +16,44 @@
 
         <link rel="stylesheet" href="https://unpkg.com/awsm.css/dist/awsm.min.css" onerror="this.onerror=null;this.href='./css/awsm.min.css';">
         <link rel="stylesheet" href="./css/main.css">
+        <script defer>
+         "use strict";
+
+         var information = {
+             "distributors" : {
+                 "korea": ["Rope Editions"],
+                 "japan": ["Tobira Records", "Art Into Life"],
+                 "russia": ["Stellage"],
+                 "uk": ["Industrial Coast", "Boomkat"],
+                 "usa": ["Torn Light", "Madriguera", "Commend", "All Day Records"],
+                 "digital": ["Bandcamp", "YouTube (ad-free)"]
+             }
+         };
+
+         window.onload = () => Object.keys(information.distributors).forEach((locale) => {
+             if (!information.distributors.hasOwnProperty(locale)) {
+                 return;
+             }
+
+             var distributors = document.querySelector(".distributors");
+
+             let localeGroup = document.createElement("dl");
+
+             distributors.append(localeGroup);
+
+             let localeHead = document.createElement("dt");
+             localeHead.innerHTML = locale;
+
+             distributors.append(localeHead);
+
+             information.distributors[locale].forEach((name) => {
+                 let distributor = document.createElement("dd");
+                 distributor.innerHTML = name;
+
+                 distributors.append(distributor);
+             });
+         });
+        </script>
     </head>
     <body>
         <img width="200" height="200" class="enmossed-background-image" src="enmossed_logo_transparent.png">
@@ -49,44 +87,4 @@
             </article>
         </main>
     </body>
-    <footer>
-        <script>
-         "use strict";
-
-         var information = {
-             "distributors" : {
-                 "korea": ["Rope Editions"],
-                 "japan": ["Tobira Records", "Art Into Life"],
-                 "russia": ["Stellage"],
-                 "uk": ["Industrial Coast", "Boomkat"],
-                 "usa": ["Torn Light", "Madriguera", "Commend", "All Day Records"],
-                 "digital": ["Bandcamp", "YouTube (ad-free)"]
-             }
-         };
-
-         Object.keys(information.distributors).forEach(function (locale) {
-             if (!information.distributors.hasOwnProperty(locale)) {
-                 return;
-             }
-
-             var distributors = document.querySelector(".distributors");
-
-             let localeGroup = document.createElement("dl");
-
-             distributors.append(localeGroup);
-
-             let localeHead = document.createElement("dt");
-             localeHead.innerHTML = locale;
-
-             distributors.append(localeHead);
-
-             information.distributors[locale].forEach(function (name) {
-                 let distributor = document.createElement("dd");
-                 distributor.innerHTML = name;
-
-                 distributors.append(distributor);
-             });
-         });
-        </script>
-    </footer>
 </html>
