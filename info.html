@@ -16,41 +16,32 @@
 
         <link rel="stylesheet" href="https://unpkg.com/awsm.css/dist/awsm.min.css" onerror="this.onerror=null;this.href='./css/awsm.min.css';">
         <link rel="stylesheet" href="./css/main.css">
-        <script defer>
-         "use strict";
+        <script type="module" defer>
+         import {getDistributors} from './enmossed-sources.js';
 
-         var information = {
-             "distributors" : {
-                 "korea": ["Rope Editions"],
-                 "japan": ["Tobira Records", "Art Into Life"],
-                 "russia": ["Stellage"],
-                 "uk": ["Industrial Coast", "Boomkat"],
-                 "usa": ["Torn Light", "Madriguera", "Commend", "All Day Records"],
-                 "digital": ["Bandcamp", "YouTube (ad-free)"]
-             }
-         };
+         let distributors = getDistributors();
 
-         window.onload = () => Object.keys(information.distributors).forEach((locale) => {
-             if (!information.distributors.hasOwnProperty(locale)) {
+         window.onload = () => Object.keys(distributors).forEach((locale) => {
+             if (!distributors.hasOwnProperty(locale)) {
                  return;
              }
 
-             var distributors = document.querySelector(".distributors");
+             var distributorsElem = document.querySelector(".distributors");
 
              let localeGroup = document.createElement("dl");
 
-             distributors.append(localeGroup);
+             distributorsElem.append(localeGroup);
 
              let localeHead = document.createElement("dt");
              localeHead.innerHTML = locale;
 
-             distributors.append(localeHead);
+             distributorsElem.append(localeHead);
 
-             information.distributors[locale].forEach((name) => {
+             distributors[locale].forEach((name) => {
                  let distributor = document.createElement("dd");
                  distributor.innerHTML = name;
 
-                 distributors.append(distributor);
+                 distributorsElem.append(distributor);
              });
          });
         </script>
