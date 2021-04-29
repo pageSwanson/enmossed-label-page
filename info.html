@@ -17,33 +17,9 @@
         <link rel="stylesheet" href="https://unpkg.com/awsm.css/dist/awsm.min.css" onerror="this.onerror=null;this.href='./css/awsm.min.css';">
         <link rel="stylesheet" href="./css/main.css">
         <script type="module" defer>
-         import {getDistributors} from './enmossed-sources.js';
+         import DistributorList from './info-list.js';
 
-         let distributors = getDistributors();
-
-         window.onload = () => Object.keys(distributors).forEach((locale) => {
-             if (!distributors.hasOwnProperty(locale)) {
-                 return;
-             }
-
-             var distributorsElem = document.querySelector(".distributors");
-
-             let localeGroup = document.createElement("dl");
-
-             distributorsElem.append(localeGroup);
-
-             let localeHead = document.createElement("dt");
-             localeHead.innerHTML = locale;
-
-             distributorsElem.append(localeHead);
-
-             distributors[locale].forEach((name) => {
-                 let distributor = document.createElement("dd");
-                 distributor.innerHTML = name;
-
-                 distributorsElem.append(distributor);
-             });
-         });
+         window.onload = () => DistributorList('article');
         </script>
     </head>
     <body>
@@ -64,18 +40,17 @@
         </header>
         <main>
             <h2>info</h2>
-            <article class="info">
-                <p>focused on contemporary sound and growth :: hand-constructed out of recycled materials as possible :: all proceeds to positive endeavors</p>
+            <p>focused on contemporary sound and growth :: hand-constructed out of recycled materials as possible :: all proceeds to positive endeavors</p>
 
-                <h2>distributors</h2>
-                <div class="distributors"></div>
-
-                <h2>message board</h2>
-                <dl>
-                    <dt>worldwide</dt>
-                    <dd>talk.enxpl.org</dd>
-                </dl>
+            <h2>distributors</h2>
+            <article>
             </article>
+
+            <h2>message board</h2>
+            <dl>
+                <dt>worldwide</dt>
+                <dd>talk.enxpl.org</dd>
+            </dl>
         </main>
     </body>
 </html>
