@@ -19,10 +19,10 @@ ${description}
 const releaseTemplate = (releaseObj) => html`
 <li>
 <details>
-<summary>${releaseObj.Title}</summary>
+<summary>${releaseObj.title}</summary>
 <dl>
-${descriptionTemplate(releaseObj.Description)}
-${embeddedPlayerTemplate(releaseObj.Embed)}
+${descriptionTemplate(releaseObj.description)}
+${embeddedPlayerTemplate(releaseObj.embed)}
 </dl>
 </details>
 </li>

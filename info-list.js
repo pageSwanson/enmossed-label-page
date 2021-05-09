@@ -3,9 +3,9 @@ import {getDistributors} from './enmossed-sources.js';
 
 let source = getDistributors();
 
-const distributorTemplate = (name) => html`
+const distributorTemplate = (distributor) => html`
 <dd>
-${name}
+<a href=${distributor.link}>${distributor.name}</a>
 </dd>
 `;
 

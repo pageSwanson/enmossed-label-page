@@ -16,6 +16,11 @@
 
         <link rel="stylesheet" href="https://unpkg.com/awsm.css/dist/awsm.min.css" onerror="this.onerror=null;this.href='./css/awsm.min.css';">
         <link rel="stylesheet" href="./css/main.css">
+        <script type="module" defer>
+         import UpcomingList from './upcoming-list.js';
+
+         window.onload = () => UpcomingList('article');
+        </script>
     </head>
     <body>
         <img width="200" height="200" class="enmossed-background-image" src="enmossed_logo_transparent.png">
@@ -36,43 +41,7 @@
         <main>
             <h2>upcoming</h2>
             <article>
-                <p>releases</p>
             </article>
         </main>
     </body>
-    <footer>
-        <script>
-         "use strict";
-
-         var information = {
-             "upcoming" : {
-                 "digital": ["Bandcamp", "YouTube (ad-free)"]
-             }
-         };
-
-         Object.keys(information.distributors).forEach(function (locale) {
-             if (!information.distributors.hasOwnProperty(locale)) {
-                 return;
-             }
-
-             var distributors = document.querySelector(".distributors");
-
-             let localeGroup = document.createElement("dl");
-
-             distributors.append(localeGroup);
-
-             let localehead = document.createelement("dt");
-             localehead.innerhtml = locale;
-
-             distributors.append(localehead);
-
-             information.distributors[locale].foreach(function (name) {
-                 let distributor = document.createelement("dd");
-                 distributor.innerhtml = name;
-
-                 distributors.append(distributor);
-             });
-         });
-        </script>
-    </footer>
 </html>
