@@ -1,13 +1,43 @@
+body {
+    font-family: Cardo;
+    font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6, li, a {
+    font-family: Amiri;
+    font-style: italic;
+    font-weight: normal;
+}
+
+header > hr {
+    background: black;
+}
+
+a {
+    text-decoration: none;
+}
+
 /* background */
-html {
-    background: linear-gradient(44deg, #757f7d, #e9e9f2);
+main {
+    overflow: hidden;
+    position: relative;
+}
+
+body > img {
+    background: linear-gradient(44deg, #76837f, #ebecd9);
     background-size: 400% 400%;
 
     -webkit-animation: AnimationName 30s ease infinite;
     -moz-animation: AnimationName 30s ease infinite;
     animation: AnimationName 30s ease infinite;
-}
 
+    opacity: 0.3;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
 @-webkit-keyframes AnimationName {
     0%{background-position:90% 0%}
     50%{background-position:11% 100%}
@@ -22,39 +52,6 @@ html {
     0%{background-position:90% 0%}
     50%{background-position:11% 100%}
     100%{background-position:90% 0%}
-}
-
-body {
-    font-family: Cardo;
-    font-weight: normal;
-}
-
-h1, h2, h3, h4, h5, h6, li, dd a {
-    font-family: Amiri;
-    font-style: italic;
-    font-weight: normal;
-}
-
-main {
-    overflow: hidden;
-    position: relative;
-}
-
-body > img {
-    opacity: 0.1;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: auto;
-}
-
-body > main {
-    position: relative;
-}
-
-header > hr {
-    background: black;
 }
 
 /* navigation */
@@ -80,9 +77,6 @@ dt {
 }
 dt ~ dd {
     display: inline;
-}
-dd a {
-    text-decoration: none;
 }
 
 /* contact */
