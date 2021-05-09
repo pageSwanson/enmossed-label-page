@@ -4,10 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <meta name="description" content="The homepage for Enmossed records. Focused on contemporary sound &amp;&amp; growth :: hand-constructed out of recycled materials :: all proceeds to positive endeavors.">
-
         <meta property="og:image" content="enmossed_logo_transparent.png">
-        <meta property="og:description" content="The homepage for Enmossed records. Focused on contemporary sound &amp;&amp; growth :: hand-constructed out of recycled materials :: all proceeds to positive endeavors.">
         <meta property="og:title" content="enmossed">
         <meta name="twitter:title" content="enmossed">
 
@@ -16,35 +13,27 @@
 
         <link rel="stylesheet" href="https://unpkg.com/awsm.css/dist/awsm.min.css" onerror="this.onerror=null;this.href='./css/awsm.min.css';">
         <link rel="stylesheet" href="./css/main.css">
-        <script type="module" defer>
-         import DistributorList from './info-list.js';
 
-         window.onload = () => DistributorList('article');
+        <script type="module">
+         import Nav from './components/nav-list.js';
+         import DistributorList from './components/info-list.js';
+
+         const onLoad = function () {
+             Nav('header', 'info');
+             DistributorList('article');
+         };
+         window.onload = onLoad;
         </script>
     </head>
     <body>
         <img width="200" height="200" class="enmossed-background-image" src="enmossed_logo_transparent.png">
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="releases.html">releases</a></li>
-                    <li>&frasl;</li>
-                    <li><a href="upcoming.html">upcoming</a></li>
-                    <li><a href="index.html"><img height="100" width="100" src="enmossed_logo_transparent.png" alt="The enmossed label logo."></a></li>
-                    <li><a class="active" href="info.html">info</a></li>
-                    <li>&frasl;</li>
-                    <li><a href="contact.html">contact</a></li>
-                </ul>
-            </nav>
-            <hr>
-        </header>
+        <header></header>
         <main>
             <h2>info</h2>
             <p>focused on contemporary sound and growth :: hand-constructed out of recycled materials as possible :: all proceeds to positive endeavors</p>
 
             <h2>distributors</h2>
-            <article>
-            </article>
+            <article></article>
 
             <h2>message board</h2>
             <dl>

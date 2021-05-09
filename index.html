@@ -17,23 +17,16 @@
 
         <link rel="stylesheet" href="https://unpkg.com/awsm.css/dist/awsm.min.css" onerror="this.onerror=null;this.href='./css/awsm.min.css';">
         <link rel="stylesheet" href="./css/main.css">
+
+        <script type="module">
+         import Nav from './components/nav-list.js';
+
+         window.onload = () => Nav('header', 'home');
+        </script>
     </head>
     <body>
         <img width="200" height="200" class="enmossed-background-image" src="enmossed_logo_transparent.png">
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="releases.html">releases</a></li>
-                    <li>&frasl;</li>
-                    <li><a href="upcoming.html">upcoming</a></li>
-                    <li><a href="index.html"><img height="100" width="100" src="enmossed_logo_transparent.png" alt="The enmossed label logo."></a></li>
-                    <li><a href="info.html">info</a></li>
-                    <li>&frasl;</li>
-                    <li><a href="contact.html">contact</a></li>
-                </ul>
-            </nav>
-            <hr>
-        </header>
+        <header></header>
         <main>
             <h2>welcome to enmossed.</h2>
         </main>
