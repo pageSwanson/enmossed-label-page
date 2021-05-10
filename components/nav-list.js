@@ -11,7 +11,7 @@ const items = [
 ];
 
 const homeOptionTemplate = () => html`
-<a href="index.html"><img height="100" width="100" src="enmossed_logo_transparent.png" alt="The enmossed label logo."></a>
+<a class="home" href="index.html"><img height="100" width="100" src="enmossed_logo_transparent.png" alt="The enmossed label logo."></a>
 `;
 
 const activeOptionTemplate = (selected) => html`
