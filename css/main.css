@@ -98,6 +98,8 @@ iframe { display: block; }
 @media (min-width:600px)  {
     nav { padding-top: 2em; }
 
+    nav li { margin-right: 1em; }
+
     header:before { background-position-x: 54.2%; }
 
     header hr { margin: 3.4em 0; }
