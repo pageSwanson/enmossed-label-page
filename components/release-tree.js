@@ -5,44 +5,32 @@ import {getSeries} from './enmossed-sources.js';
 let source = getSeries();
 
 const embeddedPlayerTemplate = (content) => html`
-<dd>
 ${unsafeHTML(content)}
-</dd>
 `;
 
 const descriptionTemplate = (description) => html`
-<dd>
+<p>
 ${description}
-</dd>
+</p>
 `;
 
 const releaseTemplate = (releaseObj) => html`
-<li>
 <details>
 <summary>${releaseObj.title}</summary>
-<dl>
-${descriptionTemplate(releaseObj.description)}
 ${embeddedPlayerTemplate(releaseObj.embed)}
-</dl>
+${descriptionTemplate(releaseObj.description)}
 </details>
-</li>
 `;
 
 const seriesTemplate = (title, series) => html`
-<li>
 <details>
 <summary>${title}</summary>
-<ul>
 ${series.map((release) => releaseTemplate(release))}
-</ul>
 </details>
-</li>
 `;
 
 const template = () => html`
-<ul>
 ${Object.keys(source).filter((label) => source.hasOwnProperty(label)).map((label) => seriesTemplate(label, source[label]))}
-</ul>
 `;
 
 export default function releaseTree(templateElementSelector) {

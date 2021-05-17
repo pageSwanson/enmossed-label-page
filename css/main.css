@@ -8,10 +8,15 @@ h1, h2, h3, h4, h5, h6, li, a {
     font-weight: normal;
 }
 
+h2 {
+    padding-bottom: 1em;
+}
+
 header > hr { background: black; }
 
 a { text-decoration: none; }
 
+/* navigation */
 header {
     position: relative;
 }
@@ -28,46 +33,32 @@ header:before {
     background-image: url('../enmossed_background_transparent.png');
     background-repeat: no-repeat;
     background-position-y: top;
-    background-position-x: 54.2%;
+    background-position-x: 58.2%;
     background-size: 36%;
 }
 
 nav {
+    text-align: center;
     position: relative;
 }
 
-/*
-main {
-    overflow: hidden;
-    position: relative;
+nav li { margin-right: .5em; }
+
+@media (hover: hover) {
+    nav a:not(.home):after {
+        content: "";
+        display: block;
+        width: 0%;
+        margin: 0 auto;
+        padding-top: 0.6em;
+        border-bottom: thin solid black;
+        transition: .5s;
+    }
+
+    nav a:not(.home):hover:after { width: 100%; }
 }
 
-body > img {
-    opacity: 0.3;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: auto;
-}
-*/
-
-/* navigation */
-nav { text-align: center; }
-
-nav li a, nav li a:hover, nav li a:visited { color: black; }
-
-nav li a:not(.home):after {
-    content: "";
-    display: block;
-    width: 0%;
-    margin: 0 auto;
-    padding-top: 0.6em;
-    border-bottom: thin solid black;
-    transition: .5s;
-}
-
-nav li a:not(.home):hover:after { width: 100%; }
+nav a, nav a:hover, nav a:visited { color: black; }
 
 nav img {
     vertical-align: middle;
@@ -75,9 +66,7 @@ nav img {
 }
 
 /* info */
-dt { margin-top: 6%; }
-
-dt ~ dd { display: inline; }
+dt ~ dd { display: inline-block; }
 
 /* contact */
 form { max-width: 100%; }
@@ -86,12 +75,37 @@ form { max-width: 100%; }
 dt ~ dd > p { display: inherit; }
 
 /* releases */
-ul > li > details { margin-top: 6%; }
+details[open] {
+    border-bottom: none;
+    padding-bottom: 0;
+}
 
-details[open] { border-bottom: none; }
+details[open] details summary {
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+details[open] summary { margin-bottom: 1em; }
 
 details[open] > summary ~ * { animation: sweep .5s ease-in-out; }
 @keyframes sweep {
     0%    {opacity: 0; margin-left: -2%; }
     100%  {opacity: 1; margin-left: 0; }
+}
+
+iframe { display: block; }
+
+@media (min-width:600px)  {
+    nav { padding-top: 2em; }
+
+    header:before { background-position-x: 54.2%; }
+
+    header hr { margin: 3.4em 0; }
+
+    details[open] > details { margin-left: 2em; }
+    details[open] > details > * { margin-left: 2em; }
+    @keyframes sweep {
+        0%    {opacity: 0; margin-left: -2%; }
+        100%  {opacity: 1; margin-left: 2em; }
+    }
 }
