@@ -31,17 +31,19 @@
                 <iframe width="100%" height="300" frameborder="0" scrolling="no" src="https://www.openstreetmap.org/export/embed.html?bbox=-71.20307922363283%2C44.101886149020416%2C-70.38597106933595%2C44.42397290075389&amp;layer=mapnik&amp;marker=44.26315010193516%2C-70.79452514648438" style="border: thin solid black"></iframe>
 
                 <h2>contact</h2>
-                <form action="mailto:info@enmossed.org"
-                      onsubmit="showOutput();">
+                <form method="post" onsubmit="showOutput();">
                     <fieldset>
                         <legend>reach enmossed</legend>
                         <label for="name">name</label>
-                        <input id="name" type="text" value="">
+                        <input name="name" type="text" value="">
+
                         <label for="email">e-mail</label>
-                        <input id="email" type="email" value="">
+                        <input name="senderEmail" type="email" value="">
+
                         <label for="message">message</label>
-                        <textarea id="message"></textarea>
-                        <input type="submit" value="Send">
+                        <textarea name="message"></textarea>
+
+                        <input type="submit" name="submit" value="Send">
                         <output id="output" style="display: none">
                             <p>thank you</p>
                         </output>

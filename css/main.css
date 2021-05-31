@@ -8,18 +8,14 @@ h1, h2, h3, h4, h5, h6, li, a {
     font-weight: normal;
 }
 
-h2 {
-    padding-bottom: 1em;
-}
+h2 { padding-bottom: 1em; }
 
 header > hr { background: black; }
 
 a { text-decoration: none; }
 
 /* navigation */
-header {
-    position: relative;
-}
+header { position: relative; }
 
 header:before {
     content: ' ';
@@ -75,27 +71,45 @@ form { max-width: 100%; }
 dt ~ dd > p { display: inherit; }
 
 /* releases */
-details[open] {
-    border-bottom: none;
-    padding-bottom: 0;
+div input[type="checkbox"] {
+    position: absolute;
+    left: -100vw;
+    opacity: 0;
+}
+div label {
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    border-bottom: 0.18em dashed;
+    margin-bottom: 1em;
+}
+div input[type="checkbox"] ~ div {
+    max-height: 0em;
+    visibility: collapse;
 }
 
-details[open] details summary {
+div input[type="checkbox"]:checked ~ div {
+    animation: sweep .7s ease-in-out;
+    max-height: 100%;
+    visibility: visible;
+}
+
+div input[type="checkbox"]:checked ~ div label {
+    animation: sweep .7s ease-in-out;
     font-style: italic;
+    border-bottom: 0.1em dashed;
     font-size: 0.9em;
 }
-
-details[open] summary { margin-bottom: 1em; }
-
-details[open] > summary ~ * { animation: sweep .5s ease-in-out; }
 @keyframes sweep {
-    0%    {opacity: 0; margin-left: -2%; }
-    100%  {opacity: 1; margin-left: 0; }
+    0%    {opacity: 0; max-height: 0; }
+    100%  {opacity: 1; max-height: 100%; }
 }
 
 iframe { display: block; }
 
-@media (min-width:600px)  {
+div > p { padding-bottom: 2em; }
+
+@media ( min-width: 600px )  {
     nav { padding-top: 2em; }
 
     nav li { margin-right: 1em; }
@@ -104,10 +118,6 @@ iframe { display: block; }
 
     header hr { margin: 3.4em 0; }
 
-    details[open] > details { margin-left: 2em; }
-    details[open] > details > * { margin-left: 2em; }
-    @keyframes sweep {
-        0%    {opacity: 0; margin-left: -2%; }
-        100%  {opacity: 1; margin-left: 2em; }
-    }
+    div input[type="checkbox"]:checked ~ div { margin-left: 2em; }
+    div input[type="checkbox"]:checked ~ div > label ~ div { margin-left: 2em; }
 }

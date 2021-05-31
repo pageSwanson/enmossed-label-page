@@ -16,12 +16,16 @@
 
         <script type="module">
          import Nav from './components/nav-list.js';
-         import ReleaseTree from './components/release-tree.js';
+         import { ReleaseTree, CollapseChildren } from './components/release-tree.js';
+         import EphemeraList from './components/ephemera-list.js';
 
          const onLoad = function () {
              Nav('header', 'releases');
-             ReleaseTree('article');
+             ReleaseTree('#releases');
+             CollapseChildren();
+             EphemeraList('#ephemera');
          };
+
          window.onload = onLoad;
         </script>
     </head>
@@ -29,7 +33,9 @@
         <header></header>
         <main>
             <h2>releases</h2>
-            <article></article>
+            <article id="releases"></article>
+            <h2>ephemera</h2>
+            <article id="ephemera"></article>
         </main>
     </body>
 </html>
