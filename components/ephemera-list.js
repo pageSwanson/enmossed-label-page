@@ -5,13 +5,11 @@ import {getEphemera} from './enmossed-sources.js';
 let source = getEphemera();
 
 const imageTemplate = (content) => html`
-<img height="290" width="290" src="${content}"></a>
+<img height="260" width="290" src="${content}">
 `;
 
 const descriptionTemplate = (description) => html`
-<p>
-${description}
-</p>
+<p>${description}</p>
 `;
 
 const ephemeraTemplate = (title, ephemeraObj) => html`

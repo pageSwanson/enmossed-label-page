@@ -109,6 +109,8 @@ iframe { display: block; }
 
 div > p { padding-bottom: 2em; }
 
+div > img { margin-left: 0; }
+
 @media ( min-width: 600px )  {
     nav { padding-top: 2em; }
 
