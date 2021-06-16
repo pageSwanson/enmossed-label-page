@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <meta property="og:image" content="enmossed_logo_transparent.png">
+        <meta property="og:image" content="assets/enmossed_logo_transparent.png">
         <meta property="og:title" content="enmossed">
         <meta name="twitter:title" content="enmossed">
 
@@ -19,17 +19,17 @@
          import { ReleaseTree, CollapseChildren } from './components/release-tree.js';
          import EphemeraList from './components/ephemera-list.js';
 
-         const onLoad = function () {
+         window.onload = () => {
              Nav('header', 'releases');
              ReleaseTree('#releases');
              CollapseChildren();
              EphemeraList('#ephemera');
+             document.querySelector('loader').style.display = "none";
          };
-
-         window.onload = onLoad;
         </script>
     </head>
     <body>
+        <loader><img src="assets/load.gif" alt="Loading..." /></loader>
         <header></header>
         <main>
             <h2>releases</h2>

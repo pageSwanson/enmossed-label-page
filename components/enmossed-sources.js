@@ -53,8 +53,8 @@ const source =
               ]
           },
           "ephemera" : {
-              "Glochids Long Sleeve T-Shirt" : { src: "glochids.jpg", description: "Produced in collaboration with Collezione Glo (glopuntia.bandcamp.com), featuring art from the Glochids \"an awareness of perfection in our mind\" mixtape (ENMX-02 // coming soon) on the front, a quote by Agnes Martin on the back, and the Enmossed x Collezione logos on the sleeve. Water-based ink on 100% cotton light grey long-sleeve." },
-              "Yokai t-shirt (for Osamu Sueyoshi) - long sleeve" : { src: "yokai.jpg", description: "Osamu Sueyoshi was a wonderful friend and collaborator; he recently passed away, leaving this world a far grimmer place without his thoughtful presence. This shirt is a reproduction of one he created in 2008, produced as a tribute to his life and artwork. The back reads \"Everybody's working for the weekend.\" All proceeds will be sent to his family. Printed with water-based ink on Gildan Softstyle shirts." }
+              "Glochids Long Sleeve T-Shirt" : { src: "assets/glochids.jpg", description: "Produced in collaboration with Collezione Glo (glopuntia.bandcamp.com), featuring art from the Glochids \"an awareness of perfection in our mind\" mixtape (ENMX-02 // coming soon) on the front, a quote by Agnes Martin on the back, and the Enmossed x Collezione logos on the sleeve. Water-based ink on 100% cotton light grey long-sleeve." },
+              "Yokai t-shirt (for Osamu Sueyoshi) - long sleeve" : { src: "assets/yokai.jpg", description: "Osamu Sueyoshi was a wonderful friend and collaborator; he recently passed away, leaving this world a far grimmer place without his thoughtful presence. This shirt is a reproduction of one he created in 2008, produced as a tribute to his life and artwork. The back reads \"Everybody's working for the weekend.\" All proceeds will be sent to his family. Printed with water-based ink on Gildan Softstyle shirts." }
           },
           "upcoming" : [
               {

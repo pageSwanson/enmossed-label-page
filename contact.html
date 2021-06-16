@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <meta property="og:image" content="enmossed_logo_transparent.png">
+        <meta property="og:image" content="assets/enmossed_logo_transparent.png">
         <meta property="og:title" content="enmossed">
         <meta name="twitter:title" content="enmossed">
 
@@ -17,7 +17,10 @@
         <script type="module">
          import Nav from './components/nav-list.js';
 
-         window.onload = () => Nav('header', 'contact');
+         window.onload = () => {
+             Nav('header', 'contact');
+             document.querySelector('loader').style.display = "none";
+         }
 
          function showOutput() {
              document.getElementById('output').style.display = 'block';
@@ -25,13 +28,14 @@
         </script>
     </head>
     <body>
+        <loader><img src="assets/load.gif" alt="Loading..." /></loader>
         <header></header>
         <main>
             <article>
                 <iframe width="100%" height="300" frameborder="0" scrolling="no" src="https://www.openstreetmap.org/export/embed.html?bbox=-71.20307922363283%2C44.101886149020416%2C-70.38597106933595%2C44.42397290075389&amp;layer=mapnik&amp;marker=44.26315010193516%2C-70.79452514648438" style="border: thin solid black"></iframe>
 
                 <h2>contact</h2>
-                <form method="post" onsubmit="showOutput();">
+                <form method="post" onsubmit="showOutput()">
                     <fieldset>
                         <legend>reach enmossed</legend>
                         <label for="name">name</label>

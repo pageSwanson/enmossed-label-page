@@ -6,7 +6,7 @@
 
         <meta name="description" content="The homepage for Enmossed records. Focused on contemporary sound &amp;&amp; growth :: hand-constructed out of recycled materials :: all proceeds to positive endeavors.">
 
-        <meta property="og:image" content="enmossed_logo_transparent.png">
+        <meta property="og:image" content="assets/enmossed_logo_transparent.png">
         <meta property="og:description" content="The homepage for Enmossed records. Focused on contemporary sound &amp;&amp; growth :: hand-constructed out of recycled materials :: all proceeds to positive endeavors.">
         <meta property="og:title" content="enmossed">
         <meta name="twitter:title" content="enmossed">
@@ -21,13 +21,17 @@
         <script type="module">
          import Nav from './components/nav-list.js';
 
-         window.onload = () => Nav('header', 'home');
+         window.onload = () => {
+             Nav('header', 'home');
+             document.querySelector('loader').style.display = "none";
+         }
         </script>
     </head>
     <body>
+        <loader><img src="assets/load.gif" alt="Loading..." /></loader>
         <header></header>
         <main>
-            <img src="enmossed_open.webp">
+            <img src="assets/enmossed_open.webp">
         </main>
     </body>
 </html>

@@ -14,6 +14,26 @@ header > hr { background: black; }
 
 a { text-decoration: none; }
 
+loader {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: block;
+    z-index: 99;
+}
+loader > img {
+    position: absolute;
+    top: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
 /* navigation */
 header { position: relative; }
 
@@ -26,7 +46,7 @@ header:before {
     width: 100%;
     height: 100%;
     opacity: 0.08;
-    background-image: url('../enmossed_background_transparent.png');
+    background-image: url('../assets/enmossed_background_transparent.png');
     background-repeat: no-repeat;
     background-position-y: top;
     background-position-x: 58.2%;
