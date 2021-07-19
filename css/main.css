@@ -74,6 +74,15 @@ nav li { margin-right: .5em; }
     nav a:not(.home):hover:after { width: 100%; }
 }
 
+nav a.active:not(.home):after {
+    content: "";
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 0.6em;
+    border-bottom: thin solid black;
+}
+
 nav a, nav a:hover, nav a:visited { color: black; }
 
 nav img {
